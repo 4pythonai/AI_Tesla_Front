@@ -1,0 +1,164 @@
+[
+  {
+    "name": "红色粉色系(red,pink)",
+    "colors": [
+      { "zh": "红色", "en": "Red", "code": "#FF0000" },
+      { "zh": "深红色", "en": "crimson", "code": "#DC143C" },
+      { "zh": "暗红色", "en": "darkred", "code": "#8B0000" },
+      { "zh": "印第安红色", "en": "indianred", "code": "#CD5C5C" },
+      { "zh": "番茄", "en": "Tomato", "code": "#FF6347" },
+      { "zh": "珊瑚", "en": "coral", "code": "#FF7F50" },
+      { "zh": "淡珊瑚", "en": "lightcoral", "code": "#F08080" },
+      { "zh": "鲑鱼色", "en": "salmon", "code": "#FA8072" },
+      { "zh": "深鲑色", "en": "Dark salmon", "code": "#E9967A" },
+      { "zh": "浅鲑色", "en": "light salmon", "code": "#FFA07A" },
+      { "zh": "深粉色", "en": "deep-pink", "code": "#FF1493" },
+      { "zh": "亮粉色", "en": "hot-pink", "code": "#FF69B4" },
+      { "zh": "浅粉色", "en": "Light-pink", "code": "#FFB6C1" },
+      { "zh": "粉色", "en": "pink", "code": "#FFC0CB" },
+      { "zh": "桃色", "en": "peach-puff", "code": "#FFDAB9" },
+      { "zh": "浅玫瑰色", "en": "misty-rose colored", "code": "#FFE4E1" }
+    ]
+  },
+  {
+    "name": "橙色,黄色系(orange,yellow)",
+    "colors": [
+      { "zh": "橙红色", "en": "Orangered", "code": "#FF4500" },
+      { "zh": "深橙色", "en": "darkorange", "code": "#FF8C00" },
+      { "zh": "橙色", "en": "orange", "code": "#FFA500" },
+      { "zh": "番木瓜色", "en": "papaya whip", "code": "#FFEFD5" },
+      { "zh": "黄金", "en": "Gold", "code": "#FFD700" },
+      { "zh": "深金黄", "en": "darkgoldenrod", "code": "#B8860B" },
+      { "zh": "金菊色", "en": "goldenrod", "code": "#DAA520" },
+      { "zh": "淡金菊色", "en": "palegoldenrod", "code": "#EEE8AA" },
+      { "zh": "黄色", "en": "Yellow", "code": "#FFFF00" },
+      { "zh": "浅黄色", "en": "light-yellow", "code": "#FFFFE0" },
+      { "zh": "柠檬雪纺色", "en": "lemon chiffon", "code": "#FFFACD" },
+      { "zh": "浅金黄色", "en": "lightgoldenrod yellow", "code": "#FAFAD2" }
+    ]
+  },
+  {
+    "name": "绿色系(green)",
+    "colors": [
+      { "zh": "绿黄色", "en": "Green yellow", "code": "#ADFF2F" },
+      { "zh": "苍绿色", "en": "palegreen", "code": "#98FB98" },
+      { "zh": "浅绿色", "en": "lightgreen", "code": "#90EE90" },
+      { "zh": "草坪绿", "en": "lawn green", "code": "#7CFC00" },
+      { "zh": "青柠绿色", "en": "Lime green", "code": "#32CD32" },
+      { "zh": "森林绿色", "en": "forestgreen", "code": "#228B22" },
+      { "zh": "绿色", "en": "green", "code": "#008000" },
+      { "zh": "深绿色", "en": "darkgreen", "code": "#006400" },
+      { "zh": "查特鲁斯绿色", "en": "Chartreuse green", "code": "#7FFF00" },
+      { "zh": "橄榄色", "en": "olive", "code": "#808000" },
+      { "zh": "深橄榄绿色", "en": "dark olivegreen", "code": "#556B2F" },
+      { "zh": "橄榄土色", "en": "olivedrab", "code": "#6B8E23" },
+      { "zh": "深海绿色", "en": "Dark sea-green", "code": "#8FBC8F" },
+      { "zh": "中春绿色", "en": "medium-spring-green", "code": "#00FA9A" },
+      { "zh": "春绿色", "en": "spring-green", "code": "#00FF7F" },
+      { "zh": "中海绿色", "en": "medium sea-green", "code": "#3CB371" },
+      { "zh": "海绿色", "en": "Sea-green", "code": "#2E8B57" },
+      { "zh": "薄荷奶油色", "en": "mint-cream", "code": "#F5FFFA" },
+      { "zh": "浅海绿色", "en": "light sea-green", "code": "#20B2AA" },
+      { "zh": "深宝石绿色", "en": "darkturquoise", "code": "#00CED1" }
+    ]
+  },
+  {
+    "name": "青色系(blue)",
+    "colors": [
+      { "zh": "中碧绿色", "en": "Medium-aquamarine", "code": "#66CDAA" },
+      { "zh": "碧绿色", "en": "aquamarine", "code": "#7FFFD4" },
+      { "zh": "青绿色", "en": "turquoise", "code": "#40E0D0" },
+      { "zh": "中青绿色", "en": "medium-turquoise", "code": "#48D1CC" },
+      { "zh": "军校蓝色", "en": "Cadet-blue", "code": "#5F9EA0" },
+      { "zh": "钢蓝色", "en": "steelblue", "code": "#4682B4" },
+      { "zh": "浅钢蓝色", "en": "light-steelblue", "code": "#B0C4DE" },
+      { "zh": "淡蓝色", "en": "lightblue", "code": "#ADD8E6" },
+      { "zh": "天蓝色", "en": "Skyblue", "code": "#87CEEB" },
+      { "zh": "深天蓝色", "en": "deep-skyblue", "code": "#00BFFF" },
+      { "zh": "道奇蓝色", "en": "dodger blue", "code": "#1E90FF" },
+      { "zh": "矢车菊蓝色", "en": "cornflowerblue", "code": "#6495ED" },
+      { "zh": "皇家蓝", "en": "Royalblue", "code": "#4169E1" },
+      { "zh": "蓝色", "en": "blue", "code": "#0000FF" },
+      { "zh": "中蓝色", "en": "medium blue", "code": "#0000CD" },
+      { "zh": "深蓝色", "en": "darkblue", "code": "#00008B" },
+      { "zh": "午夜蓝", "en": "Midnightblue", "code": "#191970" },
+      { "zh": "海军蓝", "en": "navy", "code": "#000080" },
+      { "zh": "深石板蓝", "en": "dark slateblue", "code": "#483D8B" },
+      { "zh": "石板蓝", "en": "slateblue", "code": "#6A5ACD" },
+      { "zh": "中等板岩蓝色", "en": "Medium slateblue", "code": "#7B68EE" },
+      { "zh": "蓝紫色", "en": "blue violet", "code": "#8A2BE2" },
+      { "zh": "靛蓝色", "en": "indigo", "code": "#4B0082" },
+      { "zh": "蔚蓝色", "en": "azure", "code": "#007FFF" },
+      { "zh": "爱丽丝蓝", "en": "aliceblue", "code": "#F0F8FF" }
+    ]
+  },
+  {
+    "name": "紫色系(violet)",
+    "colors": [
+      { "zh": "中紫色", "en": "Medium purple", "code": "#9370DB" },
+      { "zh": "深兰花紫色", "en": "dark-orchid", "code": "#9932CC" },
+      { "zh": "深紫罗兰色", "en": "darkviolet", "code": "#9400D3" },
+      { "zh": "中兰花紫色", "en": "medium-orchid", "code": "#BA55D3" },
+      { "zh": "蓟", "en": "Thistle", "code": "#D8BFD8" },
+      { "zh": "李子", "en": "plum", "code": "#DDA0DD" },
+      { "zh": "紫罗兰", "en": "violet", "code": "#EE82EE" },
+      { "zh": "紫色", "en": "purple", "code": "#800080" },
+      { "zh": "深洋红色", "en": "Darkmagenta", "code": "#8B008B" },
+      { "zh": "洋红色", "en": "magenta", "code": "#FF00FF" },
+      { "zh": "紫红色", "en": "fuchsia", "code": "#Fd00FF" },
+      { "zh": "兰花紫色", "en": "orchid colored", "code": "#DA70D6" },
+      { "zh": "中紫红色", "en": "Medium-violet-red", "code": "#C71585" },
+      { "zh": "淡紫红色", "en": "pale-violet-red", "code": "#DB7093" },
+      { "zh": "薰衣草红", "en": "lavenderblush", "code": "#FFF0F5" }
+    ]
+  },
+  {
+    "name": "褐色系(brown)",
+    "colors": [
+      { "zh": "马鞍棕色", "en": "Saddle-brown colored", "code": "#8B4513" },
+      { "zh": "赭色", "en": "sienna colored", "code": "#A0522D" },
+      { "zh": "棕色", "en": "brown colored", "code": "#A52A2A" },
+      { "zh": "巧克力色", "en": "chocolate colored", "code": "#D2691E" },
+      { "zh": "沙棕色", "en": "Sandy-brown colored", "code": "#F4A460" },
+      { "zh": "淡褐色", "en": "tan colored", "code": "#D2B48C" },
+      { "zh": "玫瑰棕色", "en": "rosy brown", "code": "#BC8F8F" },
+      { "zh": "深卡其色", "en": "dark khaki", "code": "#BDB76B" },
+      { "zh": "卡其色", "en": "Khaki", "code": "#F0E68C" },
+      { "zh": "米色", "en": "beige", "code": "#F5F5DC" },
+      { "zh": "小麦色", "en": "wheat colored", "code": "#F5DEB3" }
+    ]
+  },
+  {
+    "name": "白色系(white)",
+    "colors": [
+      { "zh": "玉米丝色", "en": "Cornsilk colored", "code": "#FFF8DC" },
+      { "zh": "亚麻色的", "en": "linen", "code": "#FAF0E6" },
+      { "zh": "古董白", "en": "antique-white", "code": "#FAEBD7" },
+      { "zh": "陶坯白", "en": "bisque-colored", "code": "#FFE4C4" },
+      {
+        "zh": "漂白杏仁色",
+        "en": "Blanched-almond colored",
+        "code": "#FFEBCD"
+      },
+      { "zh": "纳瓦霍白", "en": "navajowhite", "code": "#FFDEAD" },
+      { "zh": "雪", "en": "snow", "code": "#FFFAFA" },
+      { "zh": "幽灵白", "en": "ghostwhite", "code": "#F8F8FF" },
+      { "zh": "白烟色", "en": "Whitesmoke", "code": "#F5F5F5" },
+      { "zh": "象牙色", "en": "ivory", "code": "#FFFFF0" },
+      { "zh": "庚斯博罗灰色", "en": "gainsboro", "code": "#DCDCDC" }
+    ]
+  },
+  {
+    "name": "黑色系(black)",
+    "colors": [
+      { "zh": "石板灰色", "en": "Slategray", "code": "#708090" },
+      { "zh": "浅石板灰色", "en": "light-slategray", "code": "#778899" },
+      { "zh": "浅灰色", "en": "light-gray", "code": "#D3D3D3" },
+      { "zh": "银色", "en": "silver", "code": "#C0C0C0" },
+      { "zh": "灰色", "en": "Gray", "code": "#808080" },
+      { "zh": "深灰色", "en": "darkgray", "code": "#A9A9A9" },
+      { "zh": "暗青灰色", "en": "dark slategray", "code": "#2F4F4F" },
+      { "zh": "黑色", "en": "black", "code": "#000000" }
+    ]
+  }
+]
