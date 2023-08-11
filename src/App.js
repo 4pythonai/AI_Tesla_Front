@@ -64,7 +64,12 @@ function App() {
         </div>
       </section>
       <section>
-        <SDForm SetPics={SetPics} />
+        <div className="flex flex-col w-full">
+          <div className="grid h-20 card  rounded-box place-items-center">
+            <SDForm SetPics={SetPics} />
+          </div>
+        </div>
+
         {/* <TslGallery pics={pics} /> */}
       </section>
       <section>
