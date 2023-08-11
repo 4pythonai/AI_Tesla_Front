@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import SDForm from "./sdform";
+import "./index.css";
 
 function App() {
   const _pics = [
