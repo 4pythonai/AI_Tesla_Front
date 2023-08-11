@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import SDForm from "./sdform";
+import TslGallery from "./gallery";
 import "./index.css";
 
 function App() {
@@ -69,9 +70,8 @@ function App() {
             <SDForm SetPics={SetPics} />
           </div>
         </div>
-
-        {/* <TslGallery pics={pics} /> */}
       </section>
+      <TslGallery pics={pics} />
       <section>
         <div style={{ marginTop: "20px", height: "50px" }}></div>
       </section>

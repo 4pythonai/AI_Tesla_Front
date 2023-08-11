@@ -10,7 +10,6 @@ const ColorPicker = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <h3>Select a Color:</h3>
       {colorData.map((series) => (
         <div
           key={series.name}
@@ -20,8 +19,10 @@ const ColorPicker = () => {
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {series.colors.map((color) => (
               <div
+                className="hover:bg-secondary-focus"
                 key={color.code}
                 style={{
+                  margin: "4px",
                   zIndex: 10000,
                   backgroundColor: color.code,
                   color: "white",
@@ -45,7 +46,6 @@ const ColorPicker = () => {
         </div>
       ))}
       <div>
-        Selected Color:{" "}
         {selectedColor && (
           <span style={{ color: selectedColor }}>{selectedColor}</span>
         )}
