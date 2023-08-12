@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./photos";
 
-function TslGallery() {
+function TslGallery(props) {
+  console.log(props);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -19,13 +19,13 @@ function TslGallery() {
 
   return (
     <div>
-      <Gallery photos={photos} onClick={openLightbox} />
+      <Gallery photos={props.pics} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={photos.map((x) => ({
+              views={props.pics.map((x) => ({
                 ...x,
                 srcset: x.srcSet,
                 caption: x.title,

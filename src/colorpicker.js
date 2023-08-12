@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import colorData from "./colorData.json";
 
-const ColorPicker = () => {
+const ColorPicker = (props) => {
   const [selectedColor, setSelectedColor] = useState(null);
-
-  const handleColorSelect = (colorCode) => {
-    setSelectedColor(colorCode);
+  const handleColorSelect = (colorStr) => {
+    setSelectedColor(colorStr);
+    props.setColor(colorStr);
   };
 
   return (
