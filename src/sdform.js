@@ -2,8 +2,9 @@
 import React from "react";
 import { useState } from "react";
 import ColorPicker from "./colorpicker";
-import MyStopwatch from "./MyStopwatch";
 import axios from "axios";
+import RenderClock from "./components/stopwatch/RenderClock";
+import { useStopwatch } from "react-timer-hook";
 
 axios.defaults.crossDomain = true;
 axios.defaults.headers.common["Access-Control-Allow-Origin"] =
@@ -15,11 +16,13 @@ const SDForm = (props) => {
   const [showCfg, setShowcfg] = useState({ display: "none" });
   const [color, setColor] = useState("");
 
+  const { seconds, minutes, start, pause, reset } = useStopwatch({
+    autoStart: false,
+  });
+
   const time = new Date();
   time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
-
   const baseUrl = "http://127.0.0.1:8000";
-
   const showGallery = (files) => {
     const pics = files.map((filename) => {
       return {
@@ -34,6 +37,8 @@ const SDForm = (props) => {
   };
 
   const onRequestSD = async () => {
+    reset();
+    start();
     props.SetPics([]);
     const endpoint = "/txt2img";
     const apiUrl = baseUrl + endpoint;
@@ -49,8 +54,10 @@ const SDForm = (props) => {
 
       showGallery(files);
       setShowcfg({ display: "none" });
+      pause(); //停止计时
     } catch (error) {
       setShowcfg({ display: "none" });
+      pause(); //停止计时
     }
   };
   return (
@@ -107,7 +114,18 @@ const SDForm = (props) => {
               <span style={showCfg} className="loading loading-spinner"></span>
               生成照片!
             </button>
-            <MyStopwatch />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-full">
+        <div className="grid h-20 card  rounded-box place-items-center">
+          <div className="flex items-start space-x-2">
+            <RenderClock
+              seconds={seconds}
+              minutes={minutes}
+              start={start}
+              reset={reset}
+            />
           </div>
         </div>
       </div>
