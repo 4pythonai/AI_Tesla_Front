@@ -33,11 +33,7 @@ const ColorPicker = (props) => {
                   justifyContent: "center",
                   cursor: "pointer",
                 }}
-                onClick={() =>
-                  handleColorSelect(
-                    color.zh + "  " + color.en + "  " + color.code
-                  )
-                }
+                onClick={() => handleColorSelect(color.en)}
               >
                 {color.zh}
               </div>

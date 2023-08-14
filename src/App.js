@@ -13,6 +13,7 @@ function App() {
     <div className="p-6">
       <Hero />
       <SDForm SetPics={SetPics} />
+      <div style={{ height: "60px" }}></div>
       <TslGallery pics={pics} />
       <section>
         <div style={{ marginTop: "20px", height: "50px" }}></div>

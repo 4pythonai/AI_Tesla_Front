@@ -15,10 +15,10 @@ const Hero = (props) => {
           </p>{" "}
           <div className="flex justify-center">
             <a
+              href="#section-1"
               className="mt-2 inline-flex items-center rounded-lg border bg-gray-900 px-5 py-3 font-medium text-white   transition duration-500 ease-in-out"
-              href="https://github.com/r1/nine4-2/"
             >
-              <span className="justify-center">Find out more</span>
+              <span className="justify-center">开始创造</span>
             </a>
           </div>
         </div>

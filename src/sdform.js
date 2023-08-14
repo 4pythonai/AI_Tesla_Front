@@ -5,16 +5,21 @@ import ColorPicker from "./colorpicker";
 import axios from "axios";
 import RenderClock from "./components/stopwatch/RenderClock";
 import { useStopwatch } from "react-timer-hook";
+import { makePrompt } from "./utils/tools";
 
 axios.defaults.crossDomain = true;
 axios.defaults.headers.common["Access-Control-Allow-Origin"] =
   process.env.VUE_APP_Access_Control_Allow_Origin;
 
 const SDForm = (props) => {
-  const [car, setCar] = useState("Model3");
+  const [car, setCar] = useState("车型-Model3");
   const [logoText, setLogoText] = useState("YCL");
   const [showCfg, setShowcfg] = useState({ display: "none" });
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState(""); // 车膜颜色
+  const [matte, setMatte] = useState(false); // set哑光 matte color
+  const [style, setStyle] = useState("风格-柔和"); //
+  const [background, setBackground] = useState("背景-车间");
+  const [prompt, setPrompt] = useState("提示词将会显示到这里");
 
   const { seconds, minutes, start, pause, reset } = useStopwatch({
     autoStart: false,
@@ -44,10 +49,29 @@ const SDForm = (props) => {
     const apiUrl = baseUrl + endpoint;
 
     setShowcfg({ display: "block" });
-    const axiosCfg = { timeout: 500000 };
+
+    const data = {
+      car: car,
+      logoText: logoText,
+      color: color,
+      matte: matte,
+      style: style,
+      background: background,
+    };
+
+    let newPrompt = makePrompt(data);
+    setPrompt(newPrompt);
+
+    // return;
+
+    const api = axios.create({ baseURL: apiUrl, timeout: 500000 });
 
     try {
-      const response = await axios.get(apiUrl, axiosCfg);
+      const response = await api.post(apiUrl, {
+        prompt: newPrompt,
+        age: "22",
+        sex: "male",
+      });
       console.log("返回数据:", response.data);
       const files = response.data.files;
       console.log("Json序列化:", files);
@@ -60,13 +84,20 @@ const SDForm = (props) => {
       pause(); //停止计时
     }
   };
+
+  const handleChange = () => {
+    console.log(!matte);
+    setMatte(!matte);
+  };
+
   return (
     <section>
+      {/* 组件 */}
       <div className="flex flex-col w-full">
         <div className="grid h-20 card  rounded-box place-items-center">
           <div className="flex items-start space-x-2">
-            {" "}
             <div
+              id="section-1"
               style={{ marginTop: "10px" }}
               className="flex items-start space-x-2"
             >
@@ -80,11 +111,11 @@ const SDForm = (props) => {
               name=""
               className="select select-bordered max-w-xs"
             >
-              <option>Model3</option>
-              <option>ModelS</option>
-              <option>ModelY</option>
+              <option>车型-Model3</option>
+              <option>车型-ModelS</option>
+              <option>车型-ModelY</option>
             </select>
-            <div className="form-control max-w-xs">
+            <div style={{ width: "140px" }} className="form-control max-w-xs">
               <input
                 onChange={(event) => {
                   setLogoText(event.target.value);
@@ -102,6 +133,42 @@ const SDForm = (props) => {
             >
               选择车模颜色
             </button>
+            <div style={{ marginTop: "4px" }} className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">哑光</span>
+                <input
+                  value={matte}
+                  type="checkbox"
+                  onChange={handleChange}
+                  className="checkbox checkbox-primary"
+                />
+              </label>
+            </div>
+            <select
+              value={background}
+              onChange={(event) => {
+                setBackground(event.target.value);
+              }}
+              name=""
+              className="select select-bordered max-w-xs"
+            >
+              <option>背景-车间</option>
+              <option>背景-马路</option>
+              <option>背景-森林</option>
+              <option>背景-沙漠</option>
+            </select>
+            <select
+              value={style}
+              onChange={(event) => {
+                setStyle(event.target.value);
+              }}
+              name=""
+              className="select select-bordered max-w-xs"
+            >
+              <option>风格-柔和</option>
+              <option>风格-锐利</option>
+              <option>风格-动感</option>
+            </select>
             <dialog id="my_modal_4" className="modal">
               <form method="dialog" className="modal-box w-11/12 max-w-7xl">
                 <ColorPicker setColor={setColor} />
@@ -111,12 +178,32 @@ const SDForm = (props) => {
               </form>
             </dialog>
             <button className="btn btn-neutral" onClick={onRequestSD}>
-              <span style={showCfg} className="loading loading-spinner"></span>
+              <span
+                id="sd"
+                style={showCfg}
+                className="loading loading-spinner"
+              ></span>
               生成照片!
             </button>
           </div>
         </div>
       </div>
+
+      {/* prompt */}
+
+      <div className="flex flex-col w-full">
+        <div className="grid h-20 card  rounded-box place-items-center">
+          <textarea
+            value={prompt}
+            readOnly
+            className="input input-primary input-bordered textarea-xs"
+            type="text"
+            style={{ width: "940px" }}
+          />
+          <div className="flex items-start space-x-2"></div>
+        </div>
+      </div>
+
       <div className="flex flex-col w-full">
         <div className="grid h-20 card  rounded-box place-items-center">
           <div className="flex items-start space-x-2">

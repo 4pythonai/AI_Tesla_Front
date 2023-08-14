@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 5px -2px 5px;
+  margin: 0 5px;
   &: first-child {
     margin-left: 0;
   }
@@ -26,7 +26,7 @@ const SingleDigit = styled.span`
   position: relative;
   display: flex;
   flex: 0 1 25%;
-  font-size: 18px;
+  font-size: 30px;
   background-color: #404549;
   border-radius: 5px;
   padding: 10px 12px;
