@@ -61,9 +61,6 @@ const SDForm = (props) => {
 
     let newPrompt = makePrompt(data);
     setPrompt(newPrompt);
-
-    // return;
-
     const api = axios.create({ baseURL: apiUrl, timeout: 500000 });
 
     try {
@@ -91,101 +88,105 @@ const SDForm = (props) => {
   };
 
   return (
-    <section>
+    <section className="text-gray-600">
       {/* 组件 */}
-      <div className="flex flex-col w-full">
-        <div className="grid h-20 card  rounded-box place-items-center">
-          <div className="flex items-start space-x-2">
-            <div
-              id="section-1"
-              style={{ marginTop: "10px" }}
-              className="flex items-start space-x-2"
-            >
-              AI出图配置:
+
+      <div className="flex flex-col space-x-2  md:flex-row   md:gap-y-14 content-center items-center justify-center">
+        <div className="whitespace-nowrap" id="section-1">
+          AI出图配置:
+        </div>
+        <div>
+          <select
+            value={car}
+            onChange={(event) => {
+              setCar(event.target.value);
+            }}
+            name=""
+            className="select select-bordered"
+          >
+            <option>车型-Model3</option>
+            <option>车型-ModelS</option>
+            <option>车型-ModelY</option>
+          </select>
+        </div>
+
+        <div style={{ width: "140px" }} className="form-control">
+          <input
+            onChange={(event) => {
+              setLogoText(event.target.value);
+            }}
+            name="logoText"
+            value={logoText}
+            type="text"
+            placeholder="Type here"
+            className="input input-primary input-bordered"
+          />
+        </div>
+        <div className="whitespace-nowrap">
+          <button className="btn" onClick={() => window.my_modal_4.showModal()}>
+            <div className="whitespace-nowrap">选择车模颜色</div>
+          </button>
+        </div>
+        <div style={{ marginTop: "4px" }} className="form-control">
+          <label className="label cursor-pointer">
+            <span className="label-text">哑光</span>
+            <input
+              value={matte}
+              type="checkbox"
+              onChange={handleChange}
+              className="checkbox checkbox-primary"
+            />
+          </label>
+        </div>
+        <div>
+          <select
+            value={background}
+            onChange={(event) => {
+              setBackground(event.target.value);
+            }}
+            name=""
+            className="select select-bordered max-w-xs"
+          >
+            <option>背景-车间</option>
+            <option>背景-马路</option>
+            <option>背景-森林</option>
+            <option>背景-沙漠</option>
+          </select>
+        </div>
+        <div>
+          <select
+            value={style}
+            onChange={(event) => {
+              setStyle(event.target.value);
+            }}
+            name=""
+            className="select select-bordered max-w-xs"
+          >
+            <option>风格-柔和</option>
+            <option>风格-锐利</option>
+            <option>风格-动感</option>
+          </select>
+        </div>
+        <dialog id="my_modal_4" className="modal">
+          <form method="dialog" className="modal-box w-11/12 max-w-7xl">
+            <ColorPicker setColor={setColor} />
+            <div className="modal-action">
+              <button className="btn">X</button>
             </div>
-            <select
-              value={car}
-              onChange={(event) => {
-                setCar(event.target.value);
-              }}
-              name=""
-              className="select select-bordered max-w-xs"
-            >
-              <option>车型-Model3</option>
-              <option>车型-ModelS</option>
-              <option>车型-ModelY</option>
-            </select>
-            <div style={{ width: "140px" }} className="form-control max-w-xs">
-              <input
-                onChange={(event) => {
-                  setLogoText(event.target.value);
-                }}
-                name="logoText"
-                value={logoText}
-                type="text"
-                placeholder="Type here"
-                className="input input-primary input-bordered"
-              />
-            </div>
-            <button
-              className="btn"
-              onClick={() => window.my_modal_4.showModal()}
-            >
-              选择车模颜色
-            </button>
-            <div style={{ marginTop: "4px" }} className="form-control">
-              <label className="label cursor-pointer">
-                <span className="label-text">哑光</span>
-                <input
-                  value={matte}
-                  type="checkbox"
-                  onChange={handleChange}
-                  className="checkbox checkbox-primary"
-                />
-              </label>
-            </div>
-            <select
-              value={background}
-              onChange={(event) => {
-                setBackground(event.target.value);
-              }}
-              name=""
-              className="select select-bordered max-w-xs"
-            >
-              <option>背景-车间</option>
-              <option>背景-马路</option>
-              <option>背景-森林</option>
-              <option>背景-沙漠</option>
-            </select>
-            <select
-              value={style}
-              onChange={(event) => {
-                setStyle(event.target.value);
-              }}
-              name=""
-              className="select select-bordered max-w-xs"
-            >
-              <option>风格-柔和</option>
-              <option>风格-锐利</option>
-              <option>风格-动感</option>
-            </select>
-            <dialog id="my_modal_4" className="modal">
-              <form method="dialog" className="modal-box w-11/12 max-w-7xl">
-                <ColorPicker setColor={setColor} />
-                <div className="modal-action">
-                  <button className="btn">X</button>
-                </div>
-              </form>
-            </dialog>
-            <button className="btn btn-neutral" onClick={onRequestSD}>
-              <span
-                id="sd"
-                style={showCfg}
-                className="loading loading-spinner"
-              ></span>
-              生成照片!
-            </button>
-          </div>
+          </form>
+        </dialog>
+        <div>
+          <button
+            className="btn btn-neutral hover:bg-sky-700"
+            onClick={onRequestSD}
+          >
+            <span
+              id="sd"
+              style={showCfg}
+              className="loading loading-spinner hover:bg-sky-700"
+            ></span>
+            生成照片!
+          </button>
         </div>
       </div>
 

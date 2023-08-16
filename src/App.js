@@ -10,7 +10,7 @@ function App() {
   const [pics, SetPics] = useState(_pics);
 
   return (
-    <div className="p-6">
+    <div>
       <Hero />
       <SDForm SetPics={SetPics} />
       <div style={{ height: "60px" }}></div>

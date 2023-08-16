@@ -3,7 +3,7 @@ import "./index.css";
 
 const Hero = (props) => {
   return (
-    <section className="text-gray-600">
+    <div className="text-gray-600">
       <div className="mx-auto flex max-w-7xl flex-col items-center px-5 py-24 md:flex-row">
         <div className="mb-40 flex flex-col items-center pt-6 text-center md:ml-24 md:w-1/2 md:items-start md:text-left lg:grow">
           <h1 className="mb-5 items-center text-5xl  text-gray-900 sm:text-6xl">
@@ -46,7 +46,7 @@ const Hero = (props) => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
