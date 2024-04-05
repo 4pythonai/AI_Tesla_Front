@@ -2,7 +2,7 @@
 
 export function makePrompt(cfg) {
   console.log(cfg);
-  let { car, logoText, color, matte, style, background } = cfg;
+  let { car, color, matte, background } = cfg;
 
   let carm = car.replace("车型-", "");
   let backgroundstr;

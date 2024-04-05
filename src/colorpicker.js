@@ -4,9 +4,11 @@ import colorData from "./colorData.json";
 const ColorPicker = (props) => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [colorName, setColorName] = useState("");
-  const handleColorSelect = (colorStr, colorname) => {
+
+  const handleColorSelect = (colorStr, colorname, colorcode) => {
     setSelectedColor(colorStr);
     setColorName(colorname);
+    props.setColorCode(colorcode);
     props.setColor(colorStr);
   };
 
@@ -43,7 +45,9 @@ const ColorPicker = (props) => {
                     justifyContent: "center",
                     cursor: "pointer",
                   }}
-                  onClick={() => handleColorSelect(color.en, color.zh)}
+                  onClick={() =>
+                    handleColorSelect(color.en, color.zh, color.code)
+                  }
                 >
                   {color.zh}
                 </div>

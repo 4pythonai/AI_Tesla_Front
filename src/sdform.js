@@ -15,7 +15,10 @@ const SDForm = (props) => {
   const [car, setCar] = useState("车型-Model3");
   const [logoText, setLogoText] = useState("YCL");
   const [showCfg, setShowcfg] = useState({ display: "none" });
+
   const [color, setColor] = useState(""); // 车膜颜色
+  const [colorCode, setColorCode] = useState("F2F2F2"); // code
+
   const [matte, setMatte] = useState(false); // set哑光 matte color
   const [style, setStyle] = useState("风格-柔和"); //
   const [background, setBackground] = useState("背景-车间");
@@ -52,10 +55,8 @@ const SDForm = (props) => {
 
     const data = {
       car: car,
-      logoText: logoText,
       color: color,
       matte: matte,
-      style: style,
       background: background,
     };
 
@@ -93,7 +94,7 @@ const SDForm = (props) => {
 
       <div className="flex flex-col space-x-2  md:flex-row   md:gap-y-14 content-center items-center justify-center">
         <div className="whitespace-nowrap" id="section-1">
-          AI出图配置:
+          配置:
         </div>
         <div>
           <select
@@ -127,6 +128,14 @@ const SDForm = (props) => {
             <div className="whitespace-nowrap">选择车衣颜色</div>
           </button>
         </div>
+        <div
+          style={{
+            background: colorCode,
+            border: "1px solid black",
+            width: "60px",
+            height: "40px",
+          }}
+        ></div>
         <div style={{ marginTop: "4px" }} className="form-control">
           <label className="label cursor-pointer">
             <span className="label-text">哑光</span>
@@ -169,7 +178,7 @@ const SDForm = (props) => {
         </div>
         <dialog id="my_modal_4" className="modal">
           <form method="dialog" className="modal-box w-11/12 max-w-7xl">
-            <ColorPicker setColor={setColor} />
+            <ColorPicker setColorCode={setColorCode} setColor={setColor} />
             <div className="modal-action">
               <button className="btn">X</button>
             </div>
