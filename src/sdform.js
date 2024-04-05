@@ -124,7 +124,7 @@ const SDForm = (props) => {
         </div>
         <div className="whitespace-nowrap">
           <button className="btn" onClick={() => window.my_modal_4.showModal()}>
-            <div className="whitespace-nowrap">选择车模颜色</div>
+            <div className="whitespace-nowrap">选择车衣颜色</div>
           </button>
         </div>
         <div style={{ marginTop: "4px" }} className="form-control">
