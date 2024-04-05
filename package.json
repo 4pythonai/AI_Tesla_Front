@@ -82,7 +82,7 @@
   "scripts": {
     "build:tailwind": "tailwindcss build src/index.css -o src/output.css",
     "prestart": "yarn run build:tailwind",
-    "start": "node scripts/start.js",
+    "start": "export  NODE_OPTIONS=--openssl-legacy-provider &&  node scripts/start.js",
     "prebuild": "NODE_ENV=production yarn run build:tailwind",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"

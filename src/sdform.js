@@ -27,7 +27,7 @@ const SDForm = (props) => {
 
   const time = new Date();
   time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
-  const baseUrl = "http://127.0.0.1:8000";
+  const baseUrl = "http://119.255.238.247:6789";
   const showGallery = (files) => {
     const pics = files.map((filename) => {
       return {

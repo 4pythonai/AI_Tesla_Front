@@ -2219,9 +2219,9 @@ html {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hover\:bg-secondary-focus:hover {
+.hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--sf) / var(--tw-bg-opacity));
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
@@ -2260,8 +2260,8 @@ html {
     align-items: flex-start;
   }
 
-  .md\:gap-y-8 {
-    row-gap: 2rem;
+  .md\:gap-y-14 {
+    row-gap: 3.5rem;
   }
 
   .md\:pl-10 {
