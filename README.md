@@ -9,3 +9,7 @@
 - react
 - create-react-app
 - tailwinds
+- 🌼 daisyUI 3.5.1 https://daisyui.com
+
+## prot setting
+scripts/start.js ,now is 3124
